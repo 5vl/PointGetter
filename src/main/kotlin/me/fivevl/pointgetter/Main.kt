@@ -37,6 +37,7 @@ object Main {
         r.keyPress(KeyEvent.VK_D)
         r.keyRelease(KeyEvent.VK_ALT)
         r.keyRelease(KeyEvent.VK_D)
+        Thread.sleep(100)
         for (j in rand.indices) {
             val k = when {
                 rand[j] == '0' -> KeyEvent.VK_0
@@ -54,6 +55,7 @@ object Main {
             r.keyPress(k)
             r.keyRelease(k)
         }
+        Thread.sleep(100)
         r.keyPress(KeyEvent.VK_ENTER)
         r.keyRelease(KeyEvent.VK_ENTER)
         return rand
